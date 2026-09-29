@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATKFUT — Variações de landing page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap');
+  :root{
+    --bg:#0e1520; --surface:#141d2b; --line:#263346; --text:#eef2f7; --muted:#93a1b4; --amber:#e8a33d;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:var(--bg); color:var(--text); font-family:'Manrope',system-ui,sans-serif; padding:24px;
+  }
+  .wrap{ max-width:760px; width:100%; }
+  .eyebrow{ font-size:12px; text-transform:uppercase; letter-spacing:.09em; color:var(--amber); font-weight:700; margin:0 0 12px; }
+  h1{ font-size:clamp(26px,4vw,36px); margin:0 0 12px; }
+  p.lead{ color:var(--muted); font-size:15.5px; max-width:56ch; margin:0 0 32px; }
+  .cards{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:640px){ .cards{ grid-template-columns:1fr; } }
+  .card{
+    display:block; text-decoration:none; color:var(--text);
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:24px;
+    transition:border-color .15s;
+  }
+  .card:hover{ border-color:var(--amber); }
+  .tag{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--amber); margin-bottom:10px; }
+  .card h2{ font-size:19px; margin:0 0 8px; }
+  .card p{ color:var(--muted); font-size:13.5px; margin:0; line-height:1.55; }
+  .foot{ margin-top:28px; font-size:12px; color:var(--muted); }
+  .foot a{ color:var(--amber); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">ATKFUT · protótipos de landing page</p>
+    <h1>Duas variações pra comparar</h1>
+    <p class="lead">Inspiradas em atkfornecedor.com, com copy revisada para reduzir riscos de reprovação em Google Ads e TikTok Ads. Detalhes da análise no README do repositório.</p>
+    <div class="cards">
+      <a class="card" href="versao-a-ledger/">
+        <span class="tag">Versão A</span>
+        <h2>Ledger</h2>
+        <p>Visual escuro, estilo painel/dashboard, com simulador interativo de faturamento.</p>
+      </a>
+      <a class="card" href="versao-b-catalogo/">
+        <span class="tag">Versão B</span>
+        <h2>Catálogo</h2>
+        <p>Visual claro, estilo editorial, com tabela de exemplo em vez de simulador.</p>
+      </a>
+    </div>
+    <p class="foot">Código-fonte: <a href="https://github.com/Paulo-Henr1que/atkfut-landing-pages">github.com/Paulo-Henr1que/atkfut-landing-pages</a></p>
+  </div>
+</body>
+</html>
